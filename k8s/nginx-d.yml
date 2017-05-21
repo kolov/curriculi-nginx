@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: curriculi-nginx
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: curriculi-nginx
+    spec:
+      containers:
+      - name: nginx
+        image: eu.gcr.io/iconic-setup-91510/curriculi-nginx
+        ports:
+        - containerPort: 80
+
+
+

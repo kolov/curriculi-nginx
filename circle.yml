@@ -4,7 +4,8 @@ machine:
   environment:
     APP_NAME: curriculi-nginx
     BUILD_TARGET_DIR: docker
-
+    K8S_DEPLOYMENT: k8s/k8s-deployment.yml
+    K8S_SERVICE: k8s/k8s-service.yml
 test:
   override:
     - "true"
